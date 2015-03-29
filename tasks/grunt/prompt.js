@@ -65,12 +65,15 @@ module.exports    = {
             }
           },
           {
-            type    : 'list',
+            type    : 'checkbox',
             config  : 'authLinkedinConfig.scope',
             message : 'Github scope',
             choices : [
+              { name: 'r_basicprofile' },
               { name: 'r_emailaddress' },
-              { name: 'r_basicprofile' }
+              { name: 'r_fullprofile' },
+              { name: 'r_contactinfo' },
+              { name: 'r_network' },
             ],
             default : function() {
               return config['clever-auth-linkedin'].scope || ['r_emailaddress', 'r_basicprofile'];
