@@ -1,6 +1,6 @@
 var Strategy   = require('passport-linkedin-oauth2').Strategy;
 
-module.exports = function(Controller, AuthController, UserService, Exceptions, cleverAuthLinkedin, injector, passport, underscore) {
+module.exports = function(Controller, AuthController, UserService, Exceptions, config, injector, passport, underscore) {
   var state    = +new Date() + ''
     , qs       = require('qs');
 
@@ -10,7 +10,7 @@ module.exports = function(Controller, AuthController, UserService, Exceptions, c
 
     setup: function() {
       injector.instance('LinkedInStrategy', Strategy);
-      passport.use(new Strategy(underscore.extend({state: state}, cleverAuthLinkedin.config), this.callback('linkedinLogin')));
+      passport.use(new Strategy(underscore.extend({state: state}, config['clever-auth-linkedin']), this.callback('linkedinLogin')));
 
       return this._super.apply(this, arguments);
     },
@@ -36,9 +36,9 @@ module.exports = function(Controller, AuthController, UserService, Exceptions, c
     signInAction: function () {
       var params = {
         state           : state,
-        scope           : cleverAuthLinkedin.config.scope,
-        'client_id'     : cleverAuthLinkedin.config.AppKey,
-        'redirect_uri'  : cleverAuthLinkedin.config.redirectURIs,
+        scope           : config['clever-auth-linkedin'].scope,
+        'client_id'     : config['clever-auth-linkedin'].AppKey,
+        'redirect_uri'  : config['clever-auth-linkedin'].redirectURIs,
         'response_type' : 'code',
       };
 
