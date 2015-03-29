@@ -1,0 +1,48 @@
+{
+  "name"        : "clever-auth-linkedin",
+  "description" : "Linkedin Authentication for CleverStack",
+  "version"     : "1.0.0",
+  "license"     : "MIT",
+  "main"        : "module",
+  "author": {
+    "name"      : "CleverStack",
+    "email"     : "admin@cleverstack.io",
+    "web"       : "http://cleverstack.io"
+  },
+  "collaborators": [
+    "Richard Gustin <richard.gustin86@gmail.com>"
+  ],
+  "repository": {
+    "type"      : "git",
+    "url"       : "git://github.com/CleverStack/clever-auth-linkedin.git"
+  },
+  "bugs": {
+    "url"       : "https://github.com/CleverStack/clever-auth-linkedin/issues"
+  },
+  "scripts": {
+    "test"      : "grunt test:unit"
+  },
+  "dependencies": {
+    "passport-linkedin-oauth2" : "~1.2.1",
+  },
+  "devDependencies": {
+    "grunt"             : "~0.4.2",
+    "grunt-prompt"      : "~1.3.0"
+  },
+  "peerDependencies": {
+    "clever-auth"       : "~1.2.x"
+  },
+  "keywords": [
+    "cleverstack",
+    "cleverstack-module",
+    "cleverstack-backend",
+    "passport",
+    "local",
+    "authentication",
+    "linkedin",
+    "passport-linkedin",
+    "oauth",
+    "oauth2",
+    "passport-linkedin-oauth2"
+  ]
+}

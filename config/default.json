@@ -1,0 +1,8 @@
+{
+  "clever-auth-linkedin": {
+    "scope"        : ["r_emailaddress", "r_basicprofile"],
+    "clientID"     : "",
+    "callbackURL"  : "http://localhost:8080/auth/linkedin/return",
+    "clientSecret" : ""
+  }
+}
