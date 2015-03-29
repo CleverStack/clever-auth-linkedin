@@ -23,7 +23,7 @@
     "test"      : "grunt test:unit"
   },
   "dependencies": {
-    "passport-linkedin-oauth2" : "~1.2.1",
+    "passport-linkedin-oauth2" : "~1.2.x"
   },
   "devDependencies": {
     "grunt"             : "~0.4.2",
