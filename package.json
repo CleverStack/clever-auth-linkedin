@@ -1,7 +1,7 @@
 {
   "name"        : "clever-auth-linkedin",
   "description" : "Linkedin Authentication for CleverStack",
-  "version"     : "1.0.0",
+  "version"     : "0.9.0",
   "license"     : "MIT",
   "main"        : "module",
   "author": {
